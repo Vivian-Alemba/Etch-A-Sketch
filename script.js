@@ -9,7 +9,17 @@ function makeGrid(rows, cols) {
     let cell = document.createElement("div")
          cell.innerText = (c + 1)
          container.appendChild(cell).className = "grid-item"
-  };
+
+         cell.addEventListener('mouseover',e => e.target.classList.add('designColor'))
+
+
+
+         let currentColor = 'black'
+
+const colors = { black: 'black' }
+
+e => e.target.classList.add(colors[currentColor])
+  }; 
 };
 
 makeGrid(16, 16)
